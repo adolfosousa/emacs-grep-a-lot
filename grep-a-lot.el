@@ -45,7 +45,7 @@
 ;;    (grep-a-lot-advise igrep)
 ;;
 ;; Currently, there are no customization options.
-;;    
+;;
 ;; Default Key Bindings:
 ;;
 ;; Ring navigation:
@@ -191,7 +191,7 @@ Return -1 if NAME is does not match `grep-a-lot-buffer-name-regexp'."
   "Select previous buffer as current, in case current buffer is being killed."
   (if (and (grep-a-lot-buffer-p) grep-a-lot-is-current-buffer)
       (grep-a-lot-set-current-buffer (grep-a-lot-prev-buffer))))
-      
+
 (defun grep-a-lot-grep-setup-hook ()
   "Setup buffer local storage of original buffer context."
   ;; grep-a-lot-context-initial is supposed to be set already by advised grep functions
@@ -286,11 +286,12 @@ so as to enable multiple search results buffers."
 
 (defun grep-a-lot-setup-keys()
   "Define some key bindings for navigating multiple
-grep search results buffers." 
-  (define-key esc-map "g]" 'grep-a-lot-goto-next)
-  (define-key esc-map "g[" 'grep-a-lot-goto-prev)
-  (define-key esc-map "g-" 'grep-a-lot-pop-stack)
-  (define-key esc-map "g_" 'grep-a-lot-clear-stack)
-  (define-key esc-map "g=" 'grep-a-lot-restart-context))
+grep search results buffers."
+;  (define-key esc-map "g]" 'grep-a-lot-goto-next)
+;  (define-key esc-map "g[" 'grep-a-lot-goto-prev)
+;  (define-key esc-map "g-" 'grep-a-lot-pop-stack)
+;  (define-key esc-map "g_" 'grep-a-lot-clear-stack)
+;  (define-key esc-map "g=" 'grep-a-lot-restart-context)
+)
 
 (provide 'grep-a-lot)
